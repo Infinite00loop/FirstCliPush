@@ -1,7 +1,7 @@
-console.dir(document);
+// console.dir(document);
 
-document.title='Test';
-console.log(document.all)
+// document.title='Test';
+// console.log(document.all)
 // document.head.innerHTML='<h1>I am testing</h1>'
 //console.log(document.getElementById('header-title'))
 var title=document.getElementById('header-title');
@@ -42,8 +42,32 @@ var title=document.getElementById('header-title');
 // var item=document.querySelectorAll('.list-group-item')
 // item[1].style.color='green';
 
-var odd=document.querySelectorAll('li:nth-child(odd)');
+// var odd=document.querySelectorAll('li:nth-child(odd)');
 
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
+// for(var i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor='green';
+// }
+
+var itemList=document.querySelector('#items');
+//console.log(itemList.parentElement.parentElement.parentElement);
+//console.log(itemList.childNodes)
+//console.log(itemList.children)
+//console.log(itemList.firstElementChild)
+//console.log(itemList.lastElementChild)
+
+var newDiv=document.createElement('div');
+newDiv.className='hello'
+newDiv.id='hello1'
+newDiv.setAttribute("title", "Hello World");
+var newDivText=document.createTextNode('I am new text node')
+newDiv.appendChild(newDivText);
+console.log(newDiv)
+
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1')
+
+container.insertBefore(newDiv,h1);
+
+var itemList=document.querySelector('#items');
+var li=itemList.children[0];
+itemList.insertBefore(newDiv,li)

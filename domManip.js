@@ -15,3 +15,11 @@ mainTitle.style.borderBottom='solid 3px #000'
 var addItem=document.getElementById('add');
 addItem.style.fontWeight='bold';
 addItem.style.color='green';
+
+var list=document.getElementsByClassName('list-group-item');
+console.log(list);
+list[2].style.backgroundColor='green';
+
+for(var i=0;i<list.length;i++){
+    list[i].style.fontWeight='bold';
+}
